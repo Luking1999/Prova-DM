@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.provadm.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_alunoFragment"
+            app:destination="@id/alunoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_professorFragment"
+            app:destination="@id/professorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alunoFragment"
+        android:name="com.example.provadm.AlunoFragment"
+        android:label="fragment_aluno"
+        tools:layout="@layout/fragment_aluno" />
+    <fragment
+        android:id="@+id/professorFragment"
+        android:name="com.example.provadm.ProfessorFragment"
+        android:label="fragment_professor"
+        tools:layout="@layout/fragment_professor" >
+        <action
+            android:id="@+id/action_professorFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.example.provadm.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" />
+</navigation>
